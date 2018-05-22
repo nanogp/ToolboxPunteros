@@ -195,3 +195,8 @@ void limpiarPantalla()
 {
     ejecutarEnConsola(LIMPIAR_PANTALLA);
 }
+
+void saltoDeLinea()
+{
+    imprimirEnPantalla("\n");
+}

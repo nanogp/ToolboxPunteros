@@ -6,8 +6,8 @@
 #define DEFINIR_MACRO_STRING(nombre_macro) #nombre_macro
 
 //macros
-#define LIMPIAR_PANTALLA DEFINIR_MACRO_STRING(cls)
-#define HACER_PAUSA DEFINIR_MACRO_STRING(pause)
+#define LIMPIAR_PANTALLA "cls"
+#define HACER_PAUSA "pause"
 
 //limites
 #define TITULO_LARGO_MAX 1000
@@ -21,10 +21,10 @@
 //titulos
 
 //mensajes
-#define MSJ_CONFIRMA_CORRECTOS DEFINIR_MACRO_STRING(Confirma que los datos ingresados son correctos?)
-#define MSJ_CANCELO_GESTION DEFINIR_MACRO_STRING(\nSe cancelo la gestion)
-#define MSJ_MODIFICANDO_REGISTRO DEFINIR_MACRO_STRING(MODIFICANDO REGISTRO)
-#define MSJ_DATOS_A_MODIFICAR DEFINIR_MACRO_STRING(\n\nDatos a modificar:\n)
+#define MSJ_CONFIRMA_CORRECTOS "Confirma que los datos ingresados son correctos?"
+#define MSJ_CANCELO_GESTION "\nSe cancelo la gestion"
+#define MSJ_MODIFICANDO_REGISTRO "MODIFICANDO REGISTRO"
+#define MSJ_DATOS_A_MODIFICAR "\nDatos a modificar:\n"
 
 //listados
 
@@ -185,5 +185,13 @@ void limpiarPantalla();
  *
  */
 void limpiarPantallaYMostrarTitulo(char*);
+
+
+/** \brief hace un salto de linea en pantalla
+ *
+ * \return void
+ *
+ */
+void saltoDeLinea();
 
 #endif // GENERAL_H_INCLUDED

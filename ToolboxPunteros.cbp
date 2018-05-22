@@ -31,7 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="Automovil.h" />
+		<Unit filename="Archivo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Archivo.h" />
 		<Unit filename="General.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -40,7 +43,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Menu.h" />
-		<Unit filename="Propietario.h" />
+		<Unit filename="Padre.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Padre.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
