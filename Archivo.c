@@ -62,7 +62,6 @@ int archivoLeer(char* texto, int limite)
     return retorno;
 }
 
-
 int archivoLeerYCerrar(char* nombreArchivo, char* texto, int limite)
 {
     int retorno;

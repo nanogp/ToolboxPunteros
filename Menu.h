@@ -2,35 +2,23 @@
 #ifndef MENU_H_INCLUDED
 #define MENU_H_INCLUDED
 
-//limites
-#define MENU_LARGO_DESCRIPCION 100
+/**************************** LIMITES ************************************************************/
 #define MENU_LARGO_TITULO 100
 #define MENU_CANT_MAX 20
+#define MENU_LARGO_DESCRIPCION 100
 
-//constantes
 
-//titulos
-
-//mensajes
-
-//listados
-
-//orden
-
-//menus
-//#define CLASE_MENU_ACCION_TITULO DEFINIR_MACRO_STRING(Que desea modificar?)
-//#define CLASE_MENU_ACCION_CANT 2
-//#define CLASE_MENU_ACCION_DETALLE1 DEFINIR_MACRO_STRING(1. accion)
-//#define CLASE_MENU_ACCION_DETALLE0 DEFINIR_MACRO_STRING(0. Cancelar)
-
+/**************************** ESTRUCTURAS ********************************************************/
 typedef struct
 {
-    int limiteOpciones;
-    int codigos[MENU_CANT_MAX];
-    char descripciones[MENU_CANT_MAX][MENU_LARGO_DESCRIPCION];
-    char titulo[MENU_LARGO_TITULO];
+   char titulo[MENU_LARGO_TITULO];
+   int limiteOpciones;
+   int codigos[MENU_CANT_MAX];
+   char descripciones[MENU_CANT_MAX][MENU_LARGO_DESCRIPCION];
 } eMenu;
 
+
+/**************************** LISTADO DE DATOS ***************************************************/
 /** \brief muestra en pantalla un tipo de dato menu
  *
  * \param menu  eMenu*: el menu a mostrar
@@ -38,8 +26,10 @@ typedef struct
  *
  */
 void mostrarMenu(eMenu* menu);
+//-----------------------------------------------------------------------------------------------//
 
 
+/**************************** ENTRADA DE DATOS ***************************************************/
 /** \brief pide al usuario que elija una opcion de menu recibido como parametro
  *
  * \param menu  eMenu*: el menu de opciones a mostrar al usuario para pedir y validar la opcion seleccionada
@@ -47,5 +37,6 @@ void mostrarMenu(eMenu* menu);
  *
  */
 int pedirOpcion(eMenu* menu);
+//-----------------------------------------------------------------------------------------------//
 
 #endif // MENU_H_INCLUDED

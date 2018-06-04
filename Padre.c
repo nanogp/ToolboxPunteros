@@ -193,11 +193,8 @@ int ePadre_pedirReservas()
     return retorno;
 }
 
-char* ePadre_convertirCodEnTexto(int codigo)
+void ePadre_convertirCodEnTexto(int codigo, char* texto)
 {
-    char* retorno;
-    char texto[PADRE_LARGO_RESERVAS];
-
     switch(codigo)
     {
         case PADRE_K_A:
@@ -210,10 +207,6 @@ char* ePadre_convertirCodEnTexto(int codigo)
             strcpy(texto, PADRE_K_TXT_OTROS);
             break;
     }
-
-    retorno = texto;
-
-    return retorno;
 }
 
 ePadre ePadre_pedirIngreso(ePadre* listadoPadres, int limitePadres)
@@ -238,12 +231,16 @@ ePadre ePadre_pedirIngreso(ePadre* listadoPadres, int limitePadres)
 //listado
 int ePadre_mostrarUno(ePadre* padre)
 {
-     int retorno = -1;
+    int retorno = -1;
+    char textoReservas[PADRE_LARGO_RESERVAS] = {};
+    ePadre_convertirCodEnTexto(padre->reservas, textoReservas);
+
+    printf("%s\n",*textoReservas);pausa();
 
      if(padre != NULL)
      {
         retorno = 0;
-        printf(PADRE_MOSTRAR_UNO_MASCARA, padre->idPadre, padre->nombre, padre->pais, padre->dni, ePadre_convertirCodEnTexto(padre->reservas));
+        printf(PADRE_MOSTRAR_UNO_MASCARA, padre->idPadre, padre->nombre, padre->pais, padre->dni, textoReservas);
      }
      return retorno;
 }

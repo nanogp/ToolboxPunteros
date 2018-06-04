@@ -117,7 +117,7 @@ int ePadre_pedirDni();
 void ePadre_pedirNombre(char* retorno);
 void ePadre_pedirPais(char* retorno);
 int ePadre_pedirReservas();
-char* ePadre_convertirCodEnTexto(int codigo);
+void ePadre_convertirCodEnTexto(int codigo, char* texto);
 ePadre ePadre_pedirIngreso(ePadre* listadoPadres, int limitePadres);
 
 //listado
